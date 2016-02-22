@@ -23,11 +23,11 @@ class AddActor extends Actor {
 
 
 
-class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender with FutureMatchers with SpecificationLike {
+class ActorClassSpec(implicit ec: ExecutionEnv) extends TestKit(ActorSystem("test")) with ImplicitSender with FutureMatchers with SpecificationLike {
 
   implicit val askTimeout: Timeout = 2.seconds
 
-  "t1" in { implicit ec: ExecutionEnv =>
+  "t1" in {
     println("GO1")
       val underTest = system.actorOf(Props[AddActor])
       eventually {
@@ -36,7 +36,7 @@ class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender wi
       }
     }
 
-  "t2" in { implicit ec: ExecutionEnv =>
+  "t2" in {
     println("GO2")
     val underTest = system.actorOf(Props[AddActor])
     eventually {
@@ -45,7 +45,7 @@ class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender wi
     }
   }
 
-  "t3" in { implicit ec: ExecutionEnv =>
+  "t3" in {
     println("GO3")
     val underTest = system.actorOf(Props[AddActor])
     eventually {
@@ -54,7 +54,7 @@ class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender wi
     }
   }
 
-  "t4" in { implicit ec: ExecutionEnv =>
+  "t4" in {
     println("GO4")
     val underTest = system.actorOf(Props[AddActor])
     eventually {
@@ -63,7 +63,7 @@ class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender wi
     }
   }
 
-  "t5" in { implicit ec: ExecutionEnv =>
+  "t5" in {
     println("GO5")
     val underTest = system.actorOf(Props[AddActor])
     eventually {
@@ -72,7 +72,7 @@ class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender wi
     }
   }
 
-  "t6" in { implicit ec: ExecutionEnv =>
+  "t6" in {
     println("GO6")
     val underTest = system.actorOf(Props[AddActor])
     eventually {
@@ -90,7 +90,7 @@ class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender wi
     }
   }
 
-  "t8" in { implicit ec: ExecutionEnv =>
+  "t8" in {
     println("GO8")
     val underTest = system.actorOf(Props[AddActor])
     eventually {
@@ -99,7 +99,7 @@ class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender wi
     }
   }
 
-  "t9" in { implicit ec: ExecutionEnv =>
+  "t9" in {
     println("GO")
     val underTest = system.actorOf(Props[AddActor])
     eventually {
@@ -108,7 +108,7 @@ class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender wi
     }
   }
 
-  "t10" in { implicit ec: ExecutionEnv =>
+  "t10" in {
     println("GO")
     val underTest = system.actorOf(Props[AddActor])
     eventually {
@@ -117,7 +117,7 @@ class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender wi
     }
   }
 
-  "t11" in { implicit ec: ExecutionEnv =>
+  "t11" in {
     println("GO")
     val underTest = system.actorOf(Props[AddActor])
     eventually {
@@ -125,7 +125,7 @@ class ActorClassSpec extends TestKit(ActorSystem("test")) with ImplicitSender wi
     }
   }
 
-  "t12" in { implicit ec: ExecutionEnv =>
+  "t12" in {
     println("GO")
     val underTest = system.actorOf(Props[AddActor])
     eventually {

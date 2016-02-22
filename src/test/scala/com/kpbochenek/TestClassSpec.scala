@@ -8,7 +8,7 @@ import scala.concurrent.Future
 
 import scala.concurrent.ExecutionContext.Implicits.global
 
-class TestClassSpec extends SpecificationLike with FutureMatchers {
+class TestClassSpec(implicit ec: ExecutionEnv) extends SpecificationLike with FutureMatchers {
 
   def computeFuture(): Future[String] = Future {
     Thread.sleep(1000)
@@ -40,119 +40,119 @@ Future should complete succesfully
   t17 $t17
 """
 
-  def t1 = { implicit ec: ExecutionEnv =>
+  def t1 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t2 = { implicit ec: ExecutionEnv =>
+  def t2 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t3 = { implicit ec: ExecutionEnv =>
+  def t3 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t4 = { implicit ec: ExecutionEnv =>
+  def t4 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t5 = { implicit ec: ExecutionEnv =>
+  def t5 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t6 = { implicit ec: ExecutionEnv =>
+  def t6 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t7 = { implicit ec: ExecutionEnv =>
+  def t7 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t8 = { implicit ec: ExecutionEnv =>
+  def t8 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t9 = { implicit ec: ExecutionEnv =>
+  def t9 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t10 = { implicit ec: ExecutionEnv =>
+  def t10 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t11 = { implicit ec: ExecutionEnv =>
+  def t11 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t12 = { implicit ec: ExecutionEnv =>
+  def t12 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t13 = { implicit ec: ExecutionEnv =>
+  def t13 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t14 = { implicit ec: ExecutionEnv =>
+  def t14 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t15 = { implicit ec: ExecutionEnv =>
+  def t15 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t16 = { implicit ec: ExecutionEnv =>
+  def t16 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await
     }
   }
 
-  def t17 = { implicit ec: ExecutionEnv =>
+  def t17 = {
     val f: Future[String] = computeFuture()
     eventually {
       f must beEqualTo("Completed").await

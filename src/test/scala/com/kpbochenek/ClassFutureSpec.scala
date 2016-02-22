@@ -8,7 +8,7 @@ import scala.concurrent.Future
 
 import scala.concurrent.ExecutionContext.Implicits.global
 
-class ClassFutureSpec extends Specification with FutureMatchers {
+class ClassFutureSpec(implicit ec: ExecutionEnv) extends Specification with FutureMatchers {
 
   def computeFuture(): Future[String] = Future {
     println("COMPLETED!")
@@ -16,56 +16,56 @@ class ClassFutureSpec extends Specification with FutureMatchers {
   }
 
   "ClassFuture" should {
-    "t1" in { implicit ec: ExecutionEnv =>
+    "t1" in { 
       val f: Future[String] = computeFuture()
       eventually {
         f must beEqualTo("Completed").await
       }
     }
 
-    "t1" in { implicit ec: ExecutionEnv =>
+    "t1" in { 
       val f: Future[String] = computeFuture()
       eventually {
         f must beEqualTo("Completed").await
       }
     }
 
-    "t2" in { implicit ec: ExecutionEnv =>
+    "t2" in { 
       val f: Future[String] = computeFuture()
       eventually {
         f must beEqualTo("Completed").await
       }
     }
 
-    "t3" in { implicit ec: ExecutionEnv =>
+    "t3" in { 
       val f: Future[String] = computeFuture()
       eventually {
         f must beEqualTo("Completed").await
       }
     }
 
-    "t4" in { implicit ec: ExecutionEnv =>
+    "t4" in { 
       val f: Future[String] = computeFuture()
       eventually {
         f must beEqualTo("Completed").await
       }
     }
 
-    "t5" in { implicit ec: ExecutionEnv =>
+    "t5" in { 
       val f: Future[String] = computeFuture()
       eventually {
         f must beEqualTo("Completed").await
       }
     }
 
-    "t6" in { implicit ec: ExecutionEnv =>
+    "t6" in { 
       val f: Future[String] = computeFuture()
       eventually {
         f must beEqualTo("Completed").await
       }
     }
 
-    "t7" in { implicit ec: ExecutionEnv =>
+    "t7" in { 
       val f: Future[String] = computeFuture()
       eventually {
         f must beEqualTo("Completed").await
